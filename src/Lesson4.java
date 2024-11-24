@@ -68,8 +68,8 @@ public class Lesson4 {
 
         //Двенадцатое задание
         System.out.println("Двенадцатое задание:");
-        int[] arr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
-        modifyArrayNumber(arr);
+        int[] initialArr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+        modifyArrayNumber(initialArr);
         System.out.println("---------------");
 
         //Тринадцатое задание
@@ -172,20 +172,19 @@ public class Lesson4 {
     }
 
 
-    public static int [] changeArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 0) {
-                array[i] = 1;
+    public static int [] changeArray(int[] changeArray) {
+        for (int i = 0; i < changeArray.length; i++) {
+            if (changeArray[i] == 0) {
+                changeArray[i] = 1;
             } else {
-                array[i] = 0;
+                changeArray[i] = 0;
             }
         }
-        return array;
+        return changeArray;
     }
 
 
     public static int [] completionArray(int[] arrayInput) {
-        int[] arr = new int[100];
         for (int i = 0; i < 100; i++) {
             arrayInput[i] = i + 1;
         }
@@ -193,12 +192,12 @@ public class Lesson4 {
     }
 
 
-    public static void modifyArrayNumber(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < 6) {
-                arr[i] *= 2;
+    public static void modifyArrayNumber(int[] arrNumber) {
+        for (int i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] < 6) {
+                arrNumber[i] *= 2;
             }
-            System.out.print(arr[i] + " ");
+            System.out.print(arrNumber[i] + " ");
         }
     }
 
