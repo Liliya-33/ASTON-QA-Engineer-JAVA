@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Lesson4 {
+public class Main {
     public static void main(String[] args) {
         //Первое задание
         System.out.println("Первое задание:");
@@ -35,7 +35,7 @@ public class Lesson4 {
 
         //Седьмое задание
         System.out.println("Седьмое задание:");
-        boolean resultIsNegative = checkNumberIsNegative(-8);
+        boolean resultIsNegative = isNegative(-8);
         System.out.println(resultIsNegative);
         System.out.println("---------------");
 
@@ -68,7 +68,7 @@ public class Lesson4 {
 
         //Двенадцатое задание
         System.out.println("Двенадцатое задание:");
-        int[] initialArr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+        int[] initialArr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         modifyArrayNumber(initialArr);
         System.out.println("---------------");
 
@@ -87,7 +87,6 @@ public class Lesson4 {
         printArray(oneDimensionalArray);
         System.out.println("---------------");
     }
-
 
 
     public static void printThreeWords() {
@@ -134,16 +133,15 @@ public class Lesson4 {
 
 
     public static void checkNumberSign(int a) {
-        if (a >= 0){
+        if (a >= 0) {
             System.out.println("Положительное");
-        }
-        else{
+        } else {
             System.out.println("Отрицательное");
         }
     }
 
 
-    public static boolean checkNumberIsNegative(int a) {
+    public static boolean isNegative(int a) {
         return a < 0;
     }
 
@@ -156,23 +154,14 @@ public class Lesson4 {
 
 
     public static boolean isLeapYear(int year) {
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return true;
-            }
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            return true;
         } else {
             return false;
         }
     }
 
-
-    public static int [] changeArray(int[] changeArray) {
+    public static int[] changeArray(int[] changeArray) {
         for (int i = 0; i < changeArray.length; i++) {
             if (changeArray[i] == 0) {
                 changeArray[i] = 1;
@@ -184,7 +173,7 @@ public class Lesson4 {
     }
 
 
-    public static int [] completionArray(int[] arrayInput) {
+    public static int[] completionArray(int[] arrayInput) {
         for (int i = 0; i < 100; i++) {
             arrayInput[i] = i + 1;
         }
@@ -211,6 +200,7 @@ public class Lesson4 {
 
         return arr;
     }
+
     public static void printArray(int[][] arr) {
         for (int[] row : arr) {
             for (int elem : row) {
@@ -226,15 +216,15 @@ public class Lesson4 {
         Arrays.fill(arr, initialValue);
         return arr;
     }
+
     public static void printArray(int[] arr) {
         for (int i : arr) {
             System.out.print(i + " ");
         }
         System.out.println();
     }
-
-
 }
+
 
 
 
